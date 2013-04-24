@@ -58,3 +58,14 @@ body.connected #logout {
     display: block;
 }
 
+.subject-panel {
+	background: white;
+	border: 1px solid grey;
+	border-radius: 5px;
+	margin-bottom: 10px;
+}
+
+.small {
+	font-size: 0.8em;
+	color: grey;
+}
