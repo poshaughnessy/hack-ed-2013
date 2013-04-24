@@ -1,57 +1,118 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=2.0, user-scalable=yes" />
-        <title>LanZam</title>
-        <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
-        <link rel="stylesheet" href="css/screen.css" type="text/css" />
-        <script src="js/lib/jquery-2.0.0.min.js"></script>
-        <script src="js/app.js"></script>
-    </head>
-    <body>
-        <div id="fb-root"></div>
-        <script>
-            window.fbAsyncInit = function() {
-                FB.init({
-                    appId      : '510893925639827', // App ID
-                    channelUrl : 'channel.html', // Channel File
-                    status     : true, // check login status
-                    cookie     : true, // enable cookies to allow the server to access the session
-                    xfbml      : true  // parse XFBML
-                });
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=2.0, user-scalable=yes"/>
+    <title>Menty</title>
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link rel="stylesheet" href="css/screen.css" type="text/css"/>
+    <script src="js/lib/jquery-2.0.0.min.js"></script>
+    <script src="js/app.js"></script>
+</head>
+<body>
+<div id="fb-root"></div>
+<script>
+    window.fbAsyncInit = function () {
+        FB.init({
+            appId: '510893925639827', // App ID
+            channelUrl: 'channel.html', // Channel File
+            status: true, // check login status
+            cookie: true, // enable cookies to allow the server to access the session
+            xfbml: true  // parse XFBML
+        });
 
-                FB.Event.subscribe('auth.statusChange', handleStatusChange);
-            };
+        FB.Event.subscribe('auth.statusChange', handleStatusChange);
+    };
 
-            // Load the SDK Asynchronously
-            (function(d){
-                var js, id = 'facebook-jssdk', ref = d.getElementsByTagName('script')[0];
-                if (d.getElementById(id)) {return;}
-                js = d.createElement('script'); js.id = id; js.async = true;
-                js.src = "//connect.facebook.net/en_US/all.js";
-                ref.parentNode.insertBefore(js, ref);
-            }(document));
-        </script>
-        <nav>
-            <div class="logo">LanZam</div>
+    // Load the SDK Asynchronously
+    (function (d) {
+        var js, id = 'facebook-jssdk', ref = d.getElementsByTagName('script')[0];
+        if (d.getElementById(id)) {
+            return;
+        }
+        js = d.createElement('script');
+        js.id = id;
+        js.async = true;
+        js.src = "//connect.facebook.net/en_US/all.js";
+        ref.parentNode.insertBefore(js, ref);
+    }(document));
+</script>
+<nav>
+    <div class="logo">Menty</div>
 
-            <div id="login">
-                <p><button class="btn btn-primary" onClick="loginUser();">Login</button></p>
-            </div>
+    <div id="login">
+        <p>
+            <button class="btn btn-primary" onClick="loginUser();">Login
+            </button>
+        </p>
+    </div>
 
-            <div id="logout">
-                <p><button class="btn btn-danger" onClick="FB.logout();">Logout</button></p>
-            </div>
+    <div id="logout">
+        <p>
+            <button class="btn btn-danger" onClick="FB.logout();">Logout
+            </button>
+        </p>
+    </div>
 
-            <div id="user-info">
-            </div>
+    <div id="user-info">
+    </div>
 
-        </nav>
-        <div id="user-suggestions" class="page current">
+</nav>
+<div id="interests" class="page current">
 
+    <h4>Your interests</h4>
 
+    <p>Select 3 of the following:</p>
+
+    <div class="control-group">
+
+        <div class="controls">
+            <label class="checkbox">
+                <input type="checkbox" value="option1" id="inlineCheckbox1"> Drawing
+            </label>
+            <label class="checkbox">
+                <input type="checkbox" value="option2" id="inlineCheckbox2"> Football
+            </label>
+            <label class="checkbox">
+                <input type="checkbox" value="option3" id="inlineCheckbox3"> Music
+            </label>
+            <label class="checkbox">
+                <input type="checkbox" value="option3" id="inlineCheckbox4"> Cooking
+            </label>
+            <label class="checkbox">
+                <input type="checkbox" value="option3" id="inlineCheckbox5"> Gardening
+            </label>
+            <label class="checkbox">
+                <input type="checkbox" value="option3" id="inlineCheckbox6"> Dancing
+            </label>
         </div>
-        <script src="bootstrap/js/bootstrap.min.js"></script>
-    </body>
+    </div>
+
+    <button id="btnInterestsGo" class="btn btn-disabled" onClick="goToPage('subjects');">Go</button>
+
+</div>
+<div id="subjects" class="page">
+
+    <h4>Subjects</h4>
+
+    <div>
+        <h5>Computer Science</h5>
+        <p>Lorem ipsum</p>
+        <a href="#">Read More</a>
+        <button class="btn btn-primary" onClick="goToPage('xxx');">Find people</button>
+    </div>
+
+    <div>
+        <h5>Graphic Design</h5>
+        <p>Lorem ipsum</p>
+        <a href="#">Read More</a>
+        <button class="btn btn-primary" onClick="goToPage('xxx');">Find people</button>
+    </div>
+
+</div>
+<div id="user-suggestions">
+
+</div>
+<script src="bootstrap/js/bootstrap.min.js"></script>
+</body>
 </html>

@@ -78,3 +78,20 @@ function searchUsers() {
 
 }
 
+function goToPage(pageId) {
+
+    $('.page').removeClass('current');
+
+    $('#'+pageId).addClass('current');
+
+}
+
+$(function() {
+
+    $('#interests input[type=checkbox]').click(function() {
+
+        $('#btnInterestsGo').removeClass('btn-disabled').addClass('btn-primary');
+
+    });
+
+});
