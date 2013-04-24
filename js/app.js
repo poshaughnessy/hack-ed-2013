@@ -11,7 +11,11 @@ function handleStatusChange(response) {
     if( response.authResponse ) {
         connected = true;
         updateUserInfo(response);
-        displayFriends();
+
+        //displayFriends();
+
+        searchUsers();
+
     } else {
         connected = false;
         clearUserInfo();
@@ -32,19 +36,45 @@ function displayFriends() {
     FB.api('/me/friends?fields=name,picture', function(response) {
         console.log('Got friends: ', response);
 
-        if (!response.error) {
-            var markup = '';
+        displayUsers(response);
 
-            var friends = response.data;
-
-            for (var i=0; i < friends.length && i < 25; i++) {
-                var friend = friends[i];
-
-                markup += '<img src="' + friend.picture.data.url + '"> ' + friend.name + '<br>';
-            }
-
-            document.getElementById('friends').innerHTML = markup;
-        }
     });
+}
+
+function displayUsers(response) {
+
+    if (!response.error) {
+        var markup = '';
+
+        var users = response.data;
+
+        for (var i=0; i < users.length && i < 25; i++) {
+
+            var user = users[i];
+
+            console.log(user);
+
+            markup += '<img src="' + user.picture.data.url + '"> ' + user.name + '<br>';
+        }
+
+        document.getElementById('user-suggestions').innerHTML = markup;
+    }
+
+}
+
+function searchUsers() {
+
+    console.log('search users');
+
+    /*
+    FB.api('/search?q=london&type=user&fields=name,picture,hometown,location', function(response) {
+
+        console.log('response', response);
+
+        displayUsers(response);
+
+    });
+    */
+
 }
 

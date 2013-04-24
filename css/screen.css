@@ -54,7 +54,7 @@ body.connected #logout {
     padding: 10px;
 }
 
-#friends {
+.page.current {
     display: block;
 }
 
