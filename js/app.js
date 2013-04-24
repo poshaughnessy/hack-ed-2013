@@ -1,5 +1,8 @@
 var connected = false;
 
+var messages = [];
+
+
 function loginUser() {
     FB.login(function(response) { }, {scope:'email'});
 }
@@ -87,6 +90,24 @@ function goToPage(pageId) {
 
 }
 
+function renderDynamicMessages() {
+
+    var html = '';
+
+    for( var i=0; i < messages.length; i++ ) {
+
+        var msg = messages[i];
+
+        html += '<div class="message">' +
+            '<span class="user">You:</span>' +
+            '<p>'+msg+'</p>' +
+            '</div>';
+    }
+
+    $('#dynamic-messages').html(html);
+
+}
+
 $(function() {
 
     $('#interests input[type=checkbox]').click(function() {
@@ -100,6 +121,22 @@ $(function() {
             $('#btnInterestsGo').addClass('btn-disabled').removeClass('btn-primary');
 
         }
+
+    });
+
+    $('#message').keydown(function() {
+
+        $('#btn-post-message').removeClass('btn-disabled').addClass('btn-primary');
+
+    });
+
+    $('#btn-post-message').click(function() {
+
+        messages.push( $('#message').val() );
+
+        $('#message').val('');
+
+        renderDynamicMessages();
 
     });
 
