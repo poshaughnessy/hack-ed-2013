@@ -10,15 +10,16 @@ function handleStatusChange(response) {
 
     if( response.authResponse ) {
         connected = true;
-        updateUserInfo(response);
+
+        //updateUserInfo(response);
 
         //displayFriends();
 
-        searchUsers();
+        //searchUsers();
 
     } else {
         connected = false;
-        clearUserInfo();
+        //clearUserInfo();
     }
 }
 

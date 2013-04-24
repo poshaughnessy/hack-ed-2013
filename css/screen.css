@@ -36,6 +36,7 @@ nav .logo {
     margin-right: 10px;
 }
 
+/*
 #logout {
     display: none;
 }
@@ -47,6 +48,7 @@ body.connected #login {
 body.connected #logout {
     display: block;
 }
+*/
 
 #find-mentors img {
     width: 50px;
