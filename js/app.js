@@ -1,3 +1,5 @@
+var connected = false;
+
 function loginUser() {
     FB.login(function(response) { }, {scope:'email'});
 }
@@ -5,9 +7,12 @@ function loginUser() {
 function handleStatusChange(response) {
     document.body.className = response.authResponse ? 'connected' : 'not_connected';
     console.log(response);
+
     if( response.authResponse ) {
+        connected = true;
         updateUserInfo(response);
     } else {
+        connected = false;
         clearUserInfo();
     }
 }

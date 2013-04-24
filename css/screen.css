@@ -2,3 +2,44 @@ body {
     padding: 0;
     margin: 0;
 }
+
+nav {
+    height: 40px;
+    padding: 5px;
+    background: -webkit-linear-gradient(top, #666, #333);
+    color: #fff;
+}
+
+nav .logo {
+    float: left;
+}
+
+#user-info,
+#login,
+#logout {
+    float: right;
+}
+
+#user-info {
+    margin-right: 15px;
+}
+
+#user-info img {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+}
+
+#logout {
+    display: none;
+}
+
+body.connected #login {
+    display: none;
+}
+
+body.connected #logout {
+    display: block;
+}
+
+

@@ -5,6 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=2.0, user-scalable=yes" />
         <title>LanZam</title>
         <link rel="stylesheet" href="css/screen.css" type="text/css" />
+        <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
         <script src="js/lib/jquery-2.0.0.min.js"></script>
         <script src="js/app.js"></script>
     </head>
@@ -32,22 +33,30 @@
                 ref.parentNode.insertBefore(js, ref);
             }(document));
         </script>
-        <div id="home" class="page">
+        <nav>
+            <div class="logo">LanZam</div>
 
             <div id="login">
-                <p><button onClick="loginUser();">Login</button></p>
+                <p><button class="btn btn-primary" onClick="loginUser();">Login</button></p>
             </div>
+
             <div id="logout">
-                <p><button  onClick="FB.logout();">Logout</button></p>
+                <p><button class="btn btn-danger" onClick="FB.logout();">Logout</button></p>
             </div>
 
             <div id="user-info">
-
             </div>
+
+        </nav>
+        <div id="home" class="page">
+
+
 
         </div>
         <div id="game" class="page">
 
         </div>
+
+        <script src="bootstrap/js/bootstrap.min.js"></script>
     </body>
 </html>
