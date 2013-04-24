@@ -39,7 +39,7 @@
     }(document));
 </script>
 <nav>
-    <div class="logo">Menty</div>
+    <img class="logo" src="img/Menty.png"></img>
 
     <!--
     <div id="login">
@@ -50,16 +50,16 @@
     </div>
     -->
 
-    <div id="logout">
+    <!--<div id="logout">
         <p>
             <button class="btn btn-danger" onClick="FB.logout();">Logout
             </button>
         </p>
-    </div>
+    </div>-->
 
     <div id="user-info">
-        <img src="img/users/lucinda.png"/>
         Lucinda Kim
+		<img src="img/users/lucinda.png"/>
     </div>
 
 </nav>
@@ -137,7 +137,7 @@
 
 	<div class="filter">
         <div class="btn-group">
-            <button class="btn">Anyone</button>
+            <button class="btn active">Anyone</button>
             <button class="btn">Only Women</button>
         </div>
     </div>
@@ -151,51 +151,54 @@
     </div>
 
     <div class="mentor-suggestion">
-        <h5><img src="img/users/tom.jpg"/>Tom, Computer Science</h5>
+        <h5><img src="img/users/tom.jpg"/>&nbsp;&nbsp;Tom, Computer Science</h5>
         <p>I am in my first year of a Computer Science degree at the moment, and whilst it's hard work, it's also very interesting.</p>
-        <button class="btn btn-primary" onClick="goToPage('mentor')">Connect</button>
+        <button class="btn btn-primary" onClick="goToPage('mentor')">More</button>
     </div>
-
 	<div class="mentor-suggestion">
-		<h5><img src="img/users/belinda.jpg"/>Belinda, Computer Science</h5>
-		<p>Hi, I'm Belinda and I'm studying Computer Science in London. I'm hoping to become a software engineer and work on web applications when I graduate.</p>
+		<h5><img src="img/users/karen.png"/>&nbsp;&nbsp;Karen, Information Systems</h5>
+		<p>Hello, my name is Karen and I am an Information Systems student in London. I look forward to hearing from you! </p>
+		<button class="btn btn-primary" onClick="goToPage('mentor')">More</button>
 	</div>
-
 	<div class="mentor-suggestion">
-		<h5><img src="img/users/karen.jpg"/>Karen, Computational Biology</h5>
-		<p>Hello, my name is Karen and I am in my </p>
+		<h5><img src="img/users/rene.png"/>&nbsp;&nbsp;Rene, Computational Biology</h5>
+		<p>Hello, Rene here from Glasgow. I'm in my second year of a Computer Science degree.</p>
+		<button class="btn btn-primary" onClick="goToPage('mentor')">More</button>
 	</div>
-
 	<div class="mentor-suggestion">
-		<h5><img src="img/users/belinda.jpg"/>Belinda, Computer Science</h5>
+		<h5><img src="img/users/belinda.png"/>&nbsp;&nbsp;Belinda, Computer Science</h5>
 		<p>Hi, I'm Belinda and I'm studying Computer Science in London. I'm hoping to become a software engineer and work on web applications when I graduate.</p>
+		<button class="btn btn-primary" onClick="goToPage('mentor')">More</button>
 	</div>
 
 </div>
 <div id="mentor" class="page">
 
-    <h4>Message to Tom</h4>
+	<div class="bio-panel">
+		<h4><img src="img/users/tom.jpg"/>&nbsp;&nbsp;Tom, Computer Science</h4>
+		<p class="bio">I am in my first year of a Computer Science degree at the moment, and whilst it's hard work, it's also very interesting.</p>
+		<p class="bio">In my home town there were not many people who were interested in coding other than playing video games, but I found come computer clubs that gave me a lot of guidance. Now that I'm at University it's great to be with like-minded people that share my interests, and I'd be glad to help out!</p>
+	</div>
 
+	<h5>Connect to Tom</h5>
     <p>Introduce yourself, and consider explaining why you are interested...</p>
 
     <div class="thread">
 
-        <div class="message">
+	<!--<div class="message">
             <span class="user">Tom:</span>
             <p>Lorem ipsum dolor sit amet</p>
         </div>
-
-        <div class="message">
+	   <div class="message">
             <span class="user">You:</span>
             <p>Lorem ipsum dolor sit amet</p>
-        </div>
-
-        <div id="dynamic-messages"></div>
+        </div>-->
+	    <div id="dynamic-messages"></div>
 
         <textarea id="message"></textarea>
 
         <button id="btn-post-message" class="btn btn-disabled">Post</button>
-
+	</div>
 </div>
 <script src="bootstrap/js/bootstrap.min.js"></script>
 </body>

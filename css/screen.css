@@ -13,6 +13,7 @@ nav {
 
 nav .logo {
     float: left;
+	height: 38px;
 }
 
 #login,
@@ -27,13 +28,13 @@ nav .logo {
 }
 
 #user-info {
-    margin-right: 15px;
+    margin-right: 0px;
 }
 
 #user-info img {
     width: 40px;
     height: 40px;
-    margin-right: 10px;
+    margin-right: 0px;
 }
 
 /*
@@ -69,7 +70,8 @@ body.connected #logout {
 }
 
 .subject-panel,
-.mentor-suggestion {
+.mentor-suggestion,
+.bio-panel {
 	background: white;
 	border: 1px solid grey;
 	border-radius: 5px;
@@ -82,3 +84,23 @@ body.connected #logout {
 	color: grey;
 }
 
+.bio {
+	font-size: 0.9em;
+}
+
+.mentor-suggestion p {
+}
+
+.mentor-suggestion button {
+	/*float: right;*/
+}
+
+.user {
+	font-weight: bold;
+}
+#message {
+	width: 97%;
+}
+#btn-post-message {
+	float:right;
+}
