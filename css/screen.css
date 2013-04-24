@@ -48,6 +48,14 @@ body.connected #logout {
     display: block;
 }
 
+#find-mentors img {
+    width: 50px;
+}
+
+#find-mentors .filter {
+    margin-bottom: 1em;
+}
+
 .page {
     display: none;
     width: -webkit-calc(100% - 20px);
@@ -58,14 +66,17 @@ body.connected #logout {
     display: block;
 }
 
-.subject-panel {
+.subject-panel,
+.mentor-suggestion {
 	background: white;
 	border: 1px solid grey;
 	border-radius: 5px;
 	margin-bottom: 10px;
+	padding: 10px;
 }
 
 .small {
-	font-size: 0.8em;
+	font-size: 0.9em;
 	color: grey;
 }
+

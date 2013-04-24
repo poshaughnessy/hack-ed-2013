@@ -90,7 +90,15 @@ $(function() {
 
     $('#interests input[type=checkbox]').click(function() {
 
-        $('#btnInterestsGo').removeClass('btn-disabled').addClass('btn-primary');
+        if( $('#interests input:checked').length > 0 ) {
+
+            $('#btnInterestsGo').removeClass('btn-disabled').addClass('btn-primary');
+
+        } else {
+
+            $('#btnInterestsGo').addClass('btn-disabled').removeClass('btn-primary');
+
+        }
 
     });
 

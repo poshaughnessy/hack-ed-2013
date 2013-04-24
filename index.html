@@ -62,55 +62,109 @@
 
     <h4>Your interests</h4>
 
-    <p>Select 3 of the following:</p>
+    <p>Please select 3 or 4 of your top interests:</p>
 
     <div class="control-group">
 
         <div class="controls">
+			<label class="checkbox">
+				<input type="checkbox" value="option3" id="inlineCheckbox1"> Cooking
+			</label>
+			<label class="checkbox">
+				<input type="checkbox" value="option3" id="inlineCheckbox2" checked> Computers
+			</label>
+			<label class="checkbox">
+				<input type="checkbox" value="option3" id="inlineCheckbox3"> Dancing
+			</label>
             <label class="checkbox">
-                <input type="checkbox" value="option1" id="inlineCheckbox1"> Drawing
+                <input type="checkbox" value="option1" id="inlineCheckbox4" checked> Drawing and painting
             </label>
             <label class="checkbox">
-                <input type="checkbox" value="option2" id="inlineCheckbox2"> Football
+                <input type="checkbox" value="option2" id="inlineCheckbox5"> Football
             </label>
+			<label class="checkbox">
+				<input type="checkbox" value="option3" id="inlineCheckbox6"> Gardening
+			</label>
             <label class="checkbox">
-                <input type="checkbox" value="option3" id="inlineCheckbox3"> Music
+                <input type="checkbox" value="option3" id="inlineCheckbox7" checked> Music
             </label>
-            <label class="checkbox">
-                <input type="checkbox" value="option3" id="inlineCheckbox4"> Cooking
-            </label>
-            <label class="checkbox">
-                <input type="checkbox" value="option3" id="inlineCheckbox5"> Gardening
-            </label>
-            <label class="checkbox">
-                <input type="checkbox" value="option3" id="inlineCheckbox6"> Dancing
-            </label>
+			<label class="checkbox">
+				<input type="checkbox" value="option3" id="other">Other: <input type="text" name="lname">
+			</label>
         </div>
     </div>
 
-    <button id="btnInterestsGo" class="btn btn-disabled" onClick="goToPage('subjects');">Go</button>
+    <button id="btnInterestsGo" class="btn btn-primary" onClick="goToPage('subjects');">Go</button>
 
 </div>
 <div id="subjects" class="page">
 
-    <h4>Subjects</h4>
+    <h4>People with similar interests to you are now studying:</h4>
 
     <div class="subject-panel">
         <h5>Computer Science</h5>
-        <p class="small">Computer science is the scientific and practical approach to computation and its applications. A computer scientist specializes in the theory of computation and the design of computational systems.</p>
-        <a href="#">Read More</a>
-        <button class="btn btn-primary" onClick="goToPage('user-suggestions');">Find people</button>
+        <p class="small">Computer science is the scientific and practical approach to computation and its applications.
+			A computer scientist specializes in the theory of computation and the design of computational systems.
+        <a href="#">Read More</a></p>
+        <button class="btn btn-primary" onClick="goToPage('find-mentors');">Find people</button>
     </div>
 
     <div class="subject-panel">
         <h5>Graphic Design</h5>
-        <p class="small">Graphic design is undertaken to convey a specific message (or messages) to a targeted audience, usually from the client, known as the 'brief'.</p>
-        <a href="#">Read More</a>
-        <button class="btn btn-primary" onClick="goToPage('user-suggestions');">Find people</button>
+        <p class="small">Graphic design is undertaken to convey a specific message (or messages) to a targeted audience,
+			usually from the client, known as the 'brief'.
+        <a href="#">Read More</a></p>
+        <button class="btn btn-primary" onClick="goToPage('find-mentors');">Find people</button>
     </div>
 
+	<div class="subject-panel">
+		<h5>Communication Studies</h5>
+		<p class="small">Communication Studies encompasses a range of topics, from face-to-face conversation to mass media outlets such as television broadcasting.
+			It also examines how messages are interpreted through the political, cultural, economic, semiotic, hermeneutic, and social dimensions of their contexts.
+			<a href="#">Read More</a></p>
+		<button class="btn btn-primary" onClick="goToPage('find-mentors');">Find people</button>
+	</div>
+
 </div>
-<div id="user-suggestions">
+<div id="find-mentors" class="page">
+
+	<h4>Find a mentor studying Computer Science:</h4>
+
+	<div class="filter">
+        <div class="btn-group">
+            <button class="btn">Anyone</button>
+            <button class="btn">Only Women</button>
+        </div>
+    </div>
+
+    <div class="filter">
+        <div class="btn-group">
+            <button class="btn">Anywhere</button>
+            <button class="btn">UK Only</button>
+            <button class="btn">Only SE13</button>
+        </div>
+    </div>
+
+    <div class="mentor-suggestion">
+        <h5><img src="img/users/tom.jpg"/>Tom, Computer Science</h5>
+        <p>I am in my first year of a Computer Science degree at the moment, and whilst it's hard work, it's also very interesting.</p>
+    </div>
+
+	<div class="mentor-suggestion">
+		<h5><img src="img/users/belinda.jpg"/>Belinda, Computer Science</h5>
+		<p>Hi, I'm Belinda and I'm studying Computer Science in London. I'm hoping to become a software engineer and work on web applications when I graduate.</p>
+	</div>
+
+	<div class="mentor-suggestion">
+		<h5><img src="img/users/karen.jpg"/>Karen, Computational Biology</h5>
+		<p>Hello, my name is Karen and I am in my </p>
+	</div>
+
+	<div class="mentor-suggestion">
+		<h5><img src="img/users/belinda.jpg"/>Belinda, Computer Science</h5>
+		<p>Hi, I'm Belinda and I'm studying Computer Science in London. I'm hoping to become a software engineer and work on web applications when I graduate.</p>
+	</div>
+
 
 </div>
 <script src="bootstrap/js/bootstrap.min.js"></script>
