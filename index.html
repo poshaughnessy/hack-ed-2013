@@ -114,14 +114,14 @@
 
     <div class="filter">
         <div class="btn-group">
-            <button class="btn">Anyone</button>
+            <button class="btn active">Anyone</button>
             <button class="btn">Only Men</button>
         </div>
     </div>
 
     <div class="filter">
         <div class="btn-group">
-            <button class="btn">Anywhere</button>
+            <button class="btn active">Anywhere</button>
             <button class="btn">UK Only</button>
             <button class="btn">Only SW19</button>
         </div>
@@ -131,6 +131,32 @@
         <img src="img/users/tom.jpg"/>
         <h5>Tom, Computer Science</h5>
         <p>I am studying Computer Science...</p>
+        <button class="btn btn-primary" onClick="goToPage('mentor')">Connect</button>
+    </div>
+
+</div>
+<div id="mentor" class="page">
+
+    <h4>Message to Tom</h4>
+
+    <p>Introduce yourself, and consider explaining why you are interested...</p>
+
+    <div class="thread">
+
+        <div class="message">
+            <span class="user">Tom:</span>
+            <p>Lorem ipsum dolor sit amet</p>
+        </div>
+
+        <div class="message">
+            <span class="user">You:</span>
+            <p>Lorem ipsum dolor sit amet</p>
+        </div>
+
+        <textarea class="post-message"></textarea>
+
+        <button class="btn btn-primary">Post</button>
+
     </div>
 
 </div>
