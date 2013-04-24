@@ -11,6 +11,7 @@ function handleStatusChange(response) {
     if( response.authResponse ) {
         connected = true;
         updateUserInfo(response);
+        displayFriends();
     } else {
         connected = false;
         clearUserInfo();
@@ -27,8 +28,8 @@ function clearUserInfo() {
     document.getElementById('user-info').innerHTML = '';
 }
 
-function getUserFriends() {
-    FB.api('/me/friends&fields=name,picture', function(response) {
+function displayFriends() {
+    FB.api('/me/friends?fields=name,picture', function(response) {
         console.log('Got friends: ', response);
 
         if (!response.error) {
@@ -39,10 +40,11 @@ function getUserFriends() {
             for (var i=0; i < friends.length && i < 25; i++) {
                 var friend = friends[i];
 
-                markup += '<img src="' + friend.picture + '"> ' + friend.name + '<br>';
+                markup += '<img src="' + friend.picture.data.url + '"> ' + friend.name + '<br>';
             }
 
-            document.getElementById('user-friends').innerHTML = markup;
+            document.getElementById('friends').innerHTML = markup;
         }
     });
 }
+

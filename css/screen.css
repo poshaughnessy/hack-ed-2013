@@ -1,6 +1,7 @@
 body {
     padding: 0;
     margin: 0;
+    background-color: #ccc;
 }
 
 nav {
@@ -12,6 +13,11 @@ nav {
 
 nav .logo {
     float: left;
+}
+
+#login,
+#logout {
+    margin-top: 3px;
 }
 
 #user-info,
@@ -42,4 +48,13 @@ body.connected #logout {
     display: block;
 }
 
+.page {
+    display: none;
+    width: -webkit-calc(100% - 20px);
+    padding: 10px;
+}
+
+#friends {
+    display: block;
+}
 
